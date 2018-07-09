@@ -21,9 +21,9 @@ add_library(manchester_analyzer SHARED ${SOURCES})
 target_link_libraries(manchester_analyzer PRIVATE Saleae::AnalyzerSDK)
 
 if(MSVC)
-    install(TARGETS manchester_analyzer RUNTIME DESTINATION ".")
+    install(TARGETS manchester_analyzer RUNTIME DESTINATION "Analyzers")
 else()
-    install(TARGETS manchester_analyzer LIBRARY DESTINATION ".")
+    install(TARGETS manchester_analyzer LIBRARY DESTINATION "Analyzers")
 endif()
 
 set_post_build_destination(manchester_analyzer)
