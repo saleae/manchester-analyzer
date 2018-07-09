@@ -25,3 +25,5 @@ if(MSVC)
 else()
     install(TARGETS manchester_analyzer LIBRARY DESTINATION ".")
 endif()
+
+set_post_build_destination(manchester_analyzer)
