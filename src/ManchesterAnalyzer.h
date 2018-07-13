@@ -17,7 +17,7 @@
 class ManchesterAnalyzerSettings;
 
 
-class ANALYZER_EXPORT ManchesterAnalyzer : public Analyzer2
+class ManchesterAnalyzer : public Analyzer2
 {
 public:
 	ManchesterAnalyzer();
