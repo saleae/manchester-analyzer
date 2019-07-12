@@ -36,13 +36,13 @@ ManchesterAnalyzerSettings::ManchesterAnalyzerSettings()
 	mBitRateInterface->SetInteger( mBitRate );
 
 	mInvertedInterface.reset( new AnalyzerSettingInterfaceNumberList() );
-	mInvertedInterface->SetTitleAndTooltip( "", "Specify the Manchester edge polarity (Normal Manchester mode only)" );
+	mInvertedInterface->SetTitleAndTooltip( "Edge Polarity", "Specify the Manchester edge polarity (Normal Manchester mode only)" );
 	mInvertedInterface->AddNumber( false, "negative edge is binary one", "" );
 	mInvertedInterface->AddNumber( true, "negative edge is binary zero", "" );
 	mInvertedInterface->SetNumber( mInverted );
 
 	mBitsPerTransferInterface.reset( new AnalyzerSettingInterfaceNumberList() );
-	mBitsPerTransferInterface->SetTitleAndTooltip( "", "Select the number of bits per frame" ); 
+	mBitsPerTransferInterface->SetTitleAndTooltip( "Bits Per Frame", "Select the number of bits per frame" ); 
 	for( U32 i = 1; i <= 64; i++ )
 	{
 		std::stringstream ss; 
@@ -57,7 +57,7 @@ ManchesterAnalyzerSettings::ManchesterAnalyzerSettings()
 	mBitsPerTransferInterface->SetNumber( mBitsPerTransfer );
 
 	mShiftOrderInterface.reset( new AnalyzerSettingInterfaceNumberList() );
-	mShiftOrderInterface->SetTitleAndTooltip( "", "Select if the most significant bit or least significant bit is transmitted first" );
+	mShiftOrderInterface->SetTitleAndTooltip( "Significant Bit", "Select if the most significant bit or least significant bit is transmitted first" );
 	mShiftOrderInterface->AddNumber( AnalyzerEnums::LsbFirst, "Least Significant Bit Sent First", "" );
 	mShiftOrderInterface->AddNumber( AnalyzerEnums::MsbFirst, "Most Significant Bit Sent First", "" );
 	mShiftOrderInterface->SetNumber( mShiftOrder );
