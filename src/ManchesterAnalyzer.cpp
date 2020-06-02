@@ -415,10 +415,13 @@ void ManchesterAnalyzer::SaveBit( U64 location, U32 value )
                 byte |= ( mBitsForNextByte[ i ].first << i );
         }
         Frame frame;
+        FrameV2 frame_v2;
         frame.mStartingSampleInclusive = mBitsForNextByte[ 0 ].second - ( mT / 2 );
         frame.mEndingSampleInclusive = location + ( mT / 2 );
         frame.mData1 = byte;
         mResults->AddFrame( frame );
+        frame_v2.AddInteger( "data", byte );
+        mResults->AddFrameV2( frame_v2, "data", frame.mStartingSampleInclusive, frame.mEndingSampleInclusive );
         mBitsForNextByte.clear();
         mResults->CommitResults();
         ReportProgress( mManchester->GetSampleNumber() );
