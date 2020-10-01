@@ -83,3 +83,14 @@ cmake ..
 ```
 
 Then, open the newly created solution file located here: `build\manchester_analyzer.sln`
+
+
+## Output Frame Format
+  
+### Frame Type: `"data"`
+
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `data` | int | The size in bytes is determined by the settings |
+
+This is the decoded manchester word
