@@ -12,6 +12,7 @@
 ManchesterAnalyzer::ManchesterAnalyzer() : mSettings( new ManchesterAnalyzerSettings() ), Analyzer2(), mSimulationInitilized( false )
 {
     SetAnalyzerSettings( mSettings.get() );
+    UseFrameV2();
 }
 
 ManchesterAnalyzer::~ManchesterAnalyzer()
